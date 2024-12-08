@@ -89,7 +89,7 @@ function ViewCart() {
                                 <td className="py-3 text-right text-lg font-bold text-yellow-700">Rs: 250,000.00</td>
                             </tr>
                             <tr>
-                                <td colSpan="2" className="py-4">
+                                <td colSpan={2} className="py-4">
                                     <button className="w-full px-6 py-3 border border-black rounded-xl">
                                         Checkout
                                     </button>
