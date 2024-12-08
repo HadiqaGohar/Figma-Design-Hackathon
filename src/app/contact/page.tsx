@@ -97,7 +97,7 @@ function Contact() {
             </div>
             <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700">Your Message</label>
-                <textarea id="message" placeholder="Hi, I would like to ask about..." rows="4" className="w-full px-6 py-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                <textarea id="message" placeholder="Hi, I would like to ask about..." rows={4} className="w-full px-6 py-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
             </div>
         </form>
         <button type="submit" className="py-3 px-16 border border-black rounded-xl mt-8">Submit</button>
