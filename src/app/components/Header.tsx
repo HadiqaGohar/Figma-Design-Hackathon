@@ -66,10 +66,10 @@ function Header() {
 
             {/* Mobile Menu (Visible when isMenuOpen is true) */}
             <nav
-                className={`md:hidden fixed top-0 left-0 w-full h-full bg-white z-20 transition-transform duration-300 ${isMenuOpen ? 'transform translate-x-0' : 'transform -translate-x-full'}`}
+                className={`md:hidden fixed top-0 left-0 w-full h-full bg-[#fbebb5] z-20 transition-transform duration-300 ${isMenuOpen ? 'transform translate-x-0' : 'transform -translate-x-full'}`}
             >
                 <div className="flex justify-between items-center p-4 border-b">
-                    <h1 className="text-lg font-bold">Your Logo</h1>
+                    {/* <h1 className="text-lg font-bold">Your Logo</h1> */}
                     <button
                         onClick={toggleMenu}
                         className="text-2xl"
@@ -78,7 +78,7 @@ function Header() {
                         <HiOutlineX />
                     </button>
                 </div>
-                <ul className="flex flex-col items-center space-y-6 py-8">
+                <ul className="flex flex-col items-center font-bold space-y-6 py-8">
                     <li>
                         <Link href="/" aria-label="Navigate to Home" className="hover:underline">Home</Link>
                     </li>

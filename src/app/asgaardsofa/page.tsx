@@ -13,7 +13,7 @@ function AsgaardSofa() {
     return (
         <div className="max-w-screen-2xl container mx-auto pb-8 px-4">
             <Header />
-            <nav className="text-gray-700 text-lg flex items-center space-x-2">
+            <nav className="h-[100px] w-[1440px] text-gray-700 text-[16px] flex items-center space-x-2">
                 <Link href="/" className="font-bold hover:underline">
                     Home
                 </Link>
@@ -25,115 +25,121 @@ function AsgaardSofa() {
                 <span>Asgaard Sofa</span>
             </nav>
 
-            <div className="flex gap-8 mt-8">
-                {/* Left Side: Small Images */}
-                <div className="flex flex-col gap-4 h-[180px] w-[200px]">
-                    {images.map((img, idx) => (
-                        <Image
-                            key={idx}
-                            src={img}
-                            alt={`Sofa Image ${idx + 1}`}
-                            height={180}
-                            width={200}
-                            className="rounded-lg object-cover cursor-pointer hover:scale-105 transition-transform"
+            <div className="flex gap-8 mt-8 h-[820px] w-[1440px] mx-auto">
+                <div className='flex gap-8 mt-8 w-[1241.01px] h-[730.87px]'>
+                 <div className='w-[76px] h-[416px]'>
+                       {/* Left Side: Small Images */}
+                       <div className="flex flex-col gap-4 h-[80px] w-[76px]">
+                        {images.map((img, idx) => (
+                            <Image
+                                key={idx}
+                                src={img}
+                                alt={`Sofa Image ${idx + 1}`}
+                                height={80}
+                                width={76}
+                                className="rounded-lg object-cover cursor-pointer hover:scale-105 transition-transform"
+                            />
+                        ))}
+                    </div>
+                 </div>
+
+                    {/* Center: Big Image */}
+                    <div className="flex-1 h-[500px] w-[481px]">
+                       <div className='h-[500px] w-[423px]'>
+                       <Image
+                            src="/hero7.jpeg"
+                            alt="Main Sofa Image"
+                            height={391}
+                            width={481}
+                            className="w-full h-[550px] rounded-lg object-cover"
                         />
-                    ))}
-                </div>
-
-                {/* Center: Big Image */}
-                <div className="flex-1 h-[700px] w-[500px]">
-                    <Image
-                        src="/hero7.jpeg"
-                        alt="Main Sofa Image"
-                        height={500}
-                        width={300}
-                        className="w-full h-[550px] rounded-lg object-cover"
-                    />
-                </div>
-
-                {/* Right Side: Product Details */}
-                <div className="flex-1">
-                    <h3 className="text-2xl font-medium">Asgaard Sofa</h3>
-                    <p className="text-xl text-gray-500">Rs: 250,000.00</p>
-                    <div className="flex items-center space-x-2 mt-2">
-                        <span className="text-yellow-500">⭐⭐⭐⭐⭐</span>
-                        <span className="text-gray-700">(5 Customer Reviews)</span>
-                    </div>
-                    <p className="mt-4 text-gray-700">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, ea
-                        excepturi. Minima adipisci, ratione, aspernatur culpa cum dolor eos optio
-                        maiores eius, reiciendis earum aut laborum delectus exercitationem velit
-                        alias.
-                    </p>
-
-                    {/* Size Options */}
-                    <div className="mt-4">
-                        <h4 className="font-semibold">Size</h4>
-                        <div className="flex gap-2 mt-2">
-                            {sizes.map((size) => (
-                                <button
-                                    key={size}
-                                    className="border rounded-md px-4 py-2 hover:bg-gray-200"
-                                >
-                                    {size}
-                                </button>
-                            ))}
-                        </div>
+                       </div>
                     </div>
 
-                    {/* Color Options */}
-                    <div className="mt-4">
-                        <h4 className="font-semibold">Color</h4>
-                        <div className="flex gap-2 mt-2">
-                            {colors.map((color, idx) => (
-                                <div
-                                    key={idx}
-                                    className={`rounded-full h-5 w-5 ${color}`}
-                                ></div>
-                            ))}
+                    {/* Right Side: Product Details */}
+                    <div className="flex-1">
+                        <h3 className="text-2xl font-medium">Asgaard Sofa</h3>
+                        <p className="text-xl text-gray-500">Rs: 250,000.00</p>
+                        <div className="flex items-center space-x-2 mt-2">
+                            <span className="text-yellow-500">⭐⭐⭐⭐⭐</span>
+                            <span className="text-gray-700">(5 Customer Reviews)</span>
                         </div>
-                    </div>
+                        <p className="mt-4 text-gray-700">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, ea
+                            excepturi. Minima adipisci, ratione, aspernatur culpa cum dolor eos optio
+                            maiores eius, reiciendis earum aut laborum delectus exercitationem velit
+                            alias.
+                        </p>
 
-                    {/* Quantity and Add to Cart */}
-                    <div className="flex items-center gap-4 mt-6">
-                        <div className="flex items-center border p-2 gap-4">
-                            <button aria-label="Decrease quantity">-</button>
-                            <span>1</span>
-                            <button aria-label="Increase quantity">+</button>
+                        {/* Size Options */}
+                        <div className="mt-4">
+                            <h4 className="font-semibold">Size</h4>
+                            <div className="flex gap-2 mt-2">
+                                {sizes.map((size) => (
+                                    <button
+                                        key={size}
+                                        className="border rounded-md px-4 py-2 hover:bg-gray-200"
+                                    >
+                                        {size}
+                                    </button>
+                                ))}
+                            </div>
                         </div>
-                        <button className="bg-primary text-white px-6 py-2 rounded hover:bg-opacity-90">
-                            Add To Cart
-                        </button>
-                    </div>
 
-                    <hr className="my-6" />
+                        {/* Color Options */}
+                        <div className="mt-4">
+                            <h4 className="font-semibold">Color</h4>
+                            <div className="flex gap-2 mt-2">
+                                {colors.map((color, idx) => (
+                                    <div
+                                        key={idx}
+                                        className={`rounded-full h-5 w-5 ${color}`}
+                                    ></div>
+                                ))}
+                            </div>
+                        </div>
 
-                    {/* Additional Information */}
-                    <div className='mr-52 space-y-4'>
-                        <div className="flex justify-between">
-                            <span>SKU:</span>
-                            <span>SS001</span>
+                        {/* Quantity and Add to Cart */}
+                        <div className="flex items-center gap-4 mt-6">
+                            <div className="flex items-center border p-2 gap-4">
+                                <button aria-label="Decrease quantity">-</button>
+                                <span>1</span>
+                                <button aria-label="Increase quantity">+</button>
+                            </div>
+                            <button className="bg-primary text-white px-6 py-2 rounded hover:bg-opacity-90">
+                                Add To Cart
+                            </button>
                         </div>
-                        <div className="flex justify-between">
-                            <span>Category:</span>
-                            <span>Sofas</span>
-                        </div>
-                        <div className="flex justify-between">
-                            <span>Tags:</span>
-                            <span>Sofa, Chair, Home, Shop</span>
-                        </div>
-                        <div className="flex justify-between items-center mt-4">
-                            <span>Share:</span>
-                            <div className="flex space-x-2">
-                                <BsFacebook className="cursor-pointer" size={25} />
-                                <FaLinkedin className=" cursor-pointer" size={25} />
-                                <FaTwitter className="cursor-pointer" size={25} />
+
+                        <hr className="my-6" />
+
+                        {/* Additional Information */}
+                        <div className='mr-52 space-y-4'>
+                            <div className="flex justify-between">
+                                <span>SKU:</span>
+                                <span>SS001</span>
+                            </div>
+                            <div className="flex justify-between">
+                                <span>Category:</span>
+                                <span>Sofas</span>
+                            </div>
+                            <div className="flex justify-between">
+                                <span>Tags:</span>
+                                <span>Sofa, Chair, Home, Shop</span>
+                            </div>
+                            <div className="flex justify-between items-center mt-4">
+                                <span>Share:</span>
+                                <div className="flex space-x-2">
+                                    <BsFacebook className="cursor-pointer" size={25} />
+                                    <FaLinkedin className=" cursor-pointer" size={25} />
+                                    <FaTwitter className="cursor-pointer" size={25} />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <hr />
+
+            </div>            <hr />
             <div>
                 <h3 className='text-2xl font-medium my-10 flex justify-center space-x-8'>
                     <span>Description</span>

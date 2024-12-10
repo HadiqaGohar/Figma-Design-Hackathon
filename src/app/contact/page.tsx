@@ -8,31 +8,48 @@ import { BsFillClockFill } from 'react-icons/bs'
 
 function Contact() {
     return (
-        <div className="max-w-screen-xl container mx-auto pb-8 px-4">
+        <div className="max-w-screen-2xl container mx-auto pb-8 px-4">
              <div className='bg-[#faf4f4]'>
                 <Header />
             </div>
             {/* Banner Section */}
-            <div className="relative text-black">
+               {/* Banner Section */}
+               <div className="relative text-black">
+                {/* Main Banner Image */}
                 <Image
-                    src="/shop.jpeg" // Replace with the correct image file path
+                    src="/shop/shop.png" // Replace with the correct image file path
                     alt="Shop Banner"
                     height={400}
                     width={1600}
-                    className="w-full h-[200px] md:h-auto object-cover"
+                    className="w-full h-40 md:h-auto object-cover"
                 />
-                <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl md:text-5xl font-semibold ">
+
+                {/* Logo Image - Positioned Above Banner */}
+                <div className="absolute top-16 left-1/2 transform -translate-x-1/2 z-10">
+                    <Image
+                        src="/shop/logo.png" // Replace with your logo file path
+                        alt="Shop Logo"
+                        height={77}
+                        width={77}
+                        className="object-contain"
+                    />
+                </div>
+
+                {/* Main Heading */}
+                <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:text-[48px] text-[24px] font-medium  -mt-4 md:mt-0">
                     Contact
                 </h1>
+
                 {/* Breadcrumb Section */}
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-14">
                     <p className="text-gray-700 text-xs md:text-xl flex items-center">
                         <Link href="/" className="font-bold hover:underline">Home</Link>
                         <span className="font-bold mx-2">{'>'}</span>
-                        <Link href="/shop" className=" hover:underline">Contact</Link>
+                        <Link href="/shop" className="hover:underline">Contact</Link>
                     </p>
                 </div>
             </div>
+
 
            {/* Contact Info Section */}
 <section className="mt-16 text-center px-4 md:px-32">
@@ -81,7 +98,7 @@ function Contact() {
     </div>
 
     {/* Contact Form Section */}
-    <div className="mt-16 bg-white rounded-lg p-8 md:w-1/2">
+    <div className=" bg-white mx-auto justify-center rounded-lg p-8 md:w-1/2">
         <form className="space-y-4">
             <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">Your Name</label>
