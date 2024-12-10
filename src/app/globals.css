@@ -3,3 +3,91 @@
 @tailwind utilities;
 
 
+/* Slide Right Animation */
+@keyframes slideRight {
+    0% {
+      transform: translateX(100px); /* Start off-screen to the right */
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0); /* End at normal position */
+      opacity: 1;
+    }
+  }
+  
+  /* Slide Left Animation */
+  @keyframes slideLeft {
+    0% {
+      transform: translateX(-100px); /* Start off-screen to the left */
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0); /* End at normal position */
+      opacity: 1;
+    }
+  }
+  
+  /* Slide Down Animation */
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-100px); /* Start off-screen above */
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0); /* End at normal position */
+      opacity: 1;
+    }
+  }
+  
+  /* Slide Up Animation */
+  @keyframes slideUp {
+    0% {
+      transform: translateY(100px); /* Start off-screen below */
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0); /* End at normal position */
+      opacity: 1;
+    }
+  }
+  
+  /* Scroll Animations */
+  .scroll-animate-right {
+    animation: slideRight 1s ease-out forwards;
+    opacity: 0; /* Initial state (hidden) */
+  }
+  
+  .scroll-animate-left {
+    animation: slideLeft 1s ease-out forwards;
+    opacity: 0; /* Initial state (hidden) */
+  }
+  
+  .scroll-animate-down {
+    animation: slideDown 1s ease-out forwards;
+    opacity: 0; /* Initial state (hidden) */
+  }
+  
+  .scroll-animate-up {
+    animation: slideUp 1s ease-out forwards;
+    opacity: 0; /* Initial state (hidden) */
+  }
+  
+  /* Delay for animations */
+  .scroll-delay {
+    animation-delay: 0.5s; /* Add delay for when the animation starts */
+  }
+  .scroll-delay-1s {
+    animation-delay: 1s; /* 2-second delay */
+  }
+  
+  .scroll-delay-2s {
+    animation-delay: 2s; /* 3-second delay */
+  }
+  
+  .scroll-delay-3s {
+    animation-delay: 3s; /* 4-second delay */
+  }
+  
+  .scroll-delay-4s {
+    animation-delay: 4s; /* 5-second delay */
+  }

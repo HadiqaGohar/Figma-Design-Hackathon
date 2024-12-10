@@ -48,7 +48,7 @@ function Blog() {
           <p className="text-gray-700 text-xs md:text-xl flex items-center">
             <Link href="/" className="font-bold hover:underline">Home</Link>
             <span className="font-bold mx-2">{'>'}</span>
-            <Link href="/shop" className="hover:underline">Blog</Link>
+            <Link href="/blog" className="hover:underline">Blog</Link>
           </p>
         </div>
       </div>

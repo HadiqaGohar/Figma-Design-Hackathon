@@ -43,7 +43,7 @@ function MyAccount() {
                     <p className="text-gray-700 text-xs md:text-xl flex items-center">
                         <Link href="/" className="font-bold hover:underline">Home</Link>
                         <span className="font-bold mx-2">{'>'}</span>
-                        <Link href="/shop" className="hover:underline">My Account</Link>
+                        <Link href="/myaccount" className="hover:underline">My Account</Link>
                     </p>
                 </div>
             </div>

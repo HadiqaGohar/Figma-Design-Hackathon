@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { IoTimeOutline } from 'react-icons/io5'
 import { CiCalendar } from 'react-icons/ci'
 import Header from '../components/Header'
+import Asgaard from '../asgaardsofa/page'
 
 function Hero() {
     return (
@@ -16,11 +17,11 @@ function Hero() {
             <div className="bg-[#FBEBB5] mx-auto max-w-screen-2xl flex flex-col md:flex-row w-full h-auto md:h-[900px] items-center px-4">
                 {/* Text Section */}
                 <div className="w-full md:w-[440px] h-auto md:h-[276px] text-center md:text-left mt-6 md:mt-0 md:ml-[202px]">
-                    <h1 className="text-[32px] md:text-[64px] font-medium leading-tight">
+                    <h1 className="scroll-animate-left  text-[32px] md:text-[64px] font-medium leading-tight">
                         Rocket Single Seater
                     </h1>
                     <Link href="/" aria-label="Shop for Rocket Single Seater">
-                        <p className="text-[18px] md:text-[24px] mt-4 md:mt-8 font-medium underline underline-offset-8">
+                        <p className="scroll-animate-left scroll-delay-1s text-[18px] md:text-[24px] mt-4 md:mt-8 font-medium underline underline-offset-8">
                             Shop Now
                         </p>
                     </Link>
@@ -33,7 +34,7 @@ function Hero() {
                         alt="Rocket single seater hero image"
                         height={1000}
                         width={853}
-                        className="max-w-full h-auto"
+                        className="max-w-full h-auto scroll-animate-left scroll-delay-2s"
                     />
                 </div>
             </div>
@@ -42,7 +43,7 @@ function Hero() {
             {/* SECTION 2 */}
 
 
-            <div className="bg-[#FAF4F4] mx-auto  flex flex-wrap justify-center gap-8 w-full max-w-[1440px] h-[672px] p-4">
+            <div className="bg-[#FAF4F4] mx-auto  flex flex-wrap justify-center gap-8 w-full max-w-[1540px] h-[672px] p-4">
                 {/* Image 1 */}
                 <div className="flex flex-col items-center max-w-[605px]">
                     <Image
@@ -50,12 +51,12 @@ function Hero() {
                         alt="A stylish wooden side table"
                         height={562}
                         width={605}
-                        className="rounded-lg"
+                        className="rounded-lg scroll-animate-left scroll-delay-1s"
                     />
                     <div className='-mt-40 -ml-48'>
-                        <h2 className="text-[28px] md:text-[36px] mt-8 md:mt-0  font-medium">Side Table</h2>
+                        <h2 className="scroll-animate-left scroll-delay-1s text-[28px] md:text-[36px] mt-8 md:mt-0  font-medium">Side Table</h2>
                         <Link href="/">
-                            <p className="text-[15px] md:text-[20px] mt-4 font-medium underline underline-offset-8 ">
+                            <p className="scroll-animate-left scroll-delay-2s text-[15px] md:text-[20px] mt-4 font-medium underline underline-offset-8 ">
                                 View More
                             </p>
                         </Link>
@@ -69,12 +70,12 @@ function Hero() {
                         alt="A modern minimalist side table"
                         height={562}
                         width={605}
-                        className="rounded-lg"
+                        className="rounded-lg scroll-animate-left "
                     />
                     <div className='-mt-32 -ml-48'>
-                        <h2 className="text-[28px] md:text-[36px] mt-8 md:mt-0 font-medium ">Side Table</h2>
+                        <h2 className="scroll-animate-left scroll-delay-1s text-[28px] md:text-[36px] mt-8 md:mt-0 font-medium ">Side Table</h2>
                         <Link href="/">
-                            <p className="text-[15px] md:text-[20px] mt-4 font-medium underline underline-offset-8 ">
+                            <p className="scroll-animate-left scroll-delay-2s text-[15px] md:text-[20px] mt-4 font-medium underline underline-offset-8 ">
                                 View More
                             </p>
                         </Link>
@@ -171,26 +172,27 @@ function Hero() {
 
 
             {/* SECTION 4 */}
-
-            <div className='flex flex-col xl:flex-row xl:w-[1440px] xl:h-[777px] items-center text-center bg-[#FFF9E5]'>
+            {/* <div className='flex flex-col xl:flex-row xl:w-[1440px] xl:h-[777px] items-center text-center bg-[#FFF9E5]'>
                 <div>
                     <Image
                         src='/hero/sec4img1.png'
                         height={799}
                         width={983}
                         alt=''
-                        className='w-auto h-auto'
+                        className='w-auto h-auto scroll-animate-right'
                     />
 
                 </div>
                 <div className=''>
-                    <h4 className='text-[18px] md:text-[24px]'>New Arrivals</h4>
-                    <h2 className='text-[30px] md:text-[48px] font-bold'>Asgaard sofa</h2>
+                    <h4 className='text-[18px] md:text-[24px] scroll-animate-right scroll-delay-1s'>New Arrivals</h4>
+                    <h2 className='text-[30px] md:text-[48px] font-bold scroll-animate-right scroll-delay-2s'>Asgaard sofa</h2>
                     <Link href='/asgaardsofa/'>
-                        <button className='w-[175px] h-[40px] my-8 xl:my-0 md:w-[255px] md:h-[64px] border border-[#000000] mt-6'>Order Now</button>
+                        <button className='scroll-animate-right scroll-delay-3s mt-8 w-[175px] h-[40px] md:w-[255px] md:h-[64px] border border-black hover:bg-black hover:text-white transition duration-300'>Order Now</button>
                     </Link>
                 </div>
-            </div>
+            </div> */}
+
+            <Asgaard/>
 
             {/* SECTION 5 */}
             <div className="flex flex-col items-center w-full h-auto text-center px-4">
@@ -213,7 +215,7 @@ function Hero() {
                                 height={393}
                                 width={393}
                                 alt="Blog 1"
-                                className="object-cover w-full h-full"
+                                className=" object-cover w-full h-full"
                             />
                         </div>
                         <div className="my-4">
@@ -225,11 +227,11 @@ function Hero() {
                             </Link>
                             <span className="flex text-center justify-center mt-4">
                                 <span className="flex">
-                                    <IoTimeOutline size={20} />
+                                    <IoTimeOutline size={20} className='animate-bounce'/>
                                     <p className="ml-1">5 min</p>
                                 </span>
                                 <span className="flex ml-3">
-                                    <CiCalendar size={20} />
+                                    <CiCalendar size={20} className='animate-bounce'/>
                                     <p className="ml-1">12<sup>th</sup> Oct 2022</p>
                                 </span>
                             </span>
@@ -256,11 +258,11 @@ function Hero() {
                             </Link>
                             <span className="flex text-center justify-center mt-4">
                                 <span className="flex">
-                                    <IoTimeOutline size={20} />
+                                    <IoTimeOutline size={20} className='animate-bounce'/>
                                     <p className="ml-1">5 min</p>
                                 </span>
                                 <span className="flex ml-3">
-                                    <CiCalendar size={20} />
+                                    <CiCalendar size={20} className='animate-bounce'/>
                                     <p className="ml-1">12<sup>th</sup> Oct 2022</p>
                                 </span>
                             </span>
@@ -287,11 +289,11 @@ function Hero() {
                             </Link>
                             <span className="flex text-center justify-center mt-4">
                                 <span className="flex">
-                                    <IoTimeOutline size={20} />
+                                    <IoTimeOutline size={20} className='animate-bounce'/>
                                     <p className="ml-1">5 min</p>
                                 </span>
                                 <span className="flex ml-3">
-                                    <CiCalendar size={20} />
+                                    <CiCalendar size={20} className='animate-bounce'/>
                                     <p className="ml-1">12<sup>th</sup> Oct 2022</p>
                                 </span>
                             </span>
@@ -325,9 +327,10 @@ function Hero() {
                         <p className="text-[16px] sm:text-[20px]  text-center mt-2">
                             Follow our store on Instagram
                         </p>
-                        <button className="mt-4 rounded-full text-black h-[48px] sm:h-[64px] w-[200px] sm:w-[255px] md:px-16 md:py-4 shadow-md hover:shadow-lg">
+                        <button className="mt-4 rounded-full text-black hover:text-white hover:bg-black h-[48px] sm:h-[64px] w-[200px] sm:w-[255px] md:px-16 md:py-4 shadow-md hover:shadow-lg">
                             Follow Us
                         </button>
+                        
                     </div>
                 </div>
             </div>
