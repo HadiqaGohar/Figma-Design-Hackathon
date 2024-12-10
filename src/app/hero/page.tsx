@@ -82,7 +82,7 @@ function Hero() {
                 </div>
             </div>
 
-            {/* SECTION 3 */}
+            
             {/* SECTION 3 */}
             <div className="flex flex-col items-center my-auto text-center h-auto w-full font-medium">
                 <div className='flex flex-col my-auto items-center w-full'>

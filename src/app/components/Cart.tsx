@@ -37,7 +37,7 @@ function ShoppingCart() {
                             <div className="flex justify-between items-center">
                                 <div className="flex">
                                     <Image
-                                        src="/shop14.jpeg"
+                                        src="/shop/group4/img2.png"
                                         height={150}
                                         width={150}
                                         alt="Asgaard Sofa"

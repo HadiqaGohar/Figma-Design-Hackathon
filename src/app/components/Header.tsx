@@ -56,10 +56,10 @@ function Header() {
                     <Link href='/myaccount'>
                         <FaRegUser aria-label="User Profile" size={20} />
                     </Link>
-                    <Link href='/search'>
+                    <Link href='/'>
                         <FiSearch aria-label="Search" size={22} />
                     </Link>
-                    <Link href='/favorite'>
+                    <Link href='/'>
                         <IoMdHeartEmpty aria-label="Favorites" size={25} />
                     </Link>
                     <div className="flex items-center z-10">
