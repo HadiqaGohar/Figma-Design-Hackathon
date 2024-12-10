@@ -62,7 +62,7 @@ function Header() {
                     <Link href='/favorite'>
                         <IoMdHeartEmpty aria-label="Favorites" size={25} />
                     </Link>
-                    <div className="flex items-center z-10">
+                    <div className="flex items-center  z-10">
                         <ShoppingCart />
                     </div>
                 </div>
