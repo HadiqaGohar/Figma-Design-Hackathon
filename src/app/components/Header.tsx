@@ -19,7 +19,7 @@ function Header() {
     return (
         <header>
             <div className="flex justify-between items-center mx-auto max-w-screen-2xl p-4">
-              
+
 
                 {/* Mobile Menu Button */}
                 <button
@@ -56,8 +56,12 @@ function Header() {
                     <Link href='/myaccount'>
                         <FaRegUser aria-label="User Profile" size={20} />
                     </Link>
-                    <FiSearch aria-label="Search" size={22} />
-                    <IoMdHeartEmpty aria-label="Favorites" size={25} />
+                    <Link href='/search'>
+                        <FiSearch aria-label="Search" size={22} />
+                    </Link>
+                    <Link href='/favorite'>
+                        <IoMdHeartEmpty aria-label="Favorites" size={25} />
+                    </Link>
                     <div className="flex items-center z-10">
                         <ShoppingCart />
                     </div>
