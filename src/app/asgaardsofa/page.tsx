@@ -6,7 +6,7 @@ function Asgaard() {
   const products = [
     {
       id: 1,
-      href: "/asgaard/1",
+      href: "/asgaardsofa/1",
     },
   ];
 
