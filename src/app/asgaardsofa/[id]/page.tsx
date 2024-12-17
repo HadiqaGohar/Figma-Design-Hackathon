@@ -170,7 +170,7 @@ function AsgaardSofaId() {
       </div>
 
       {/* Related Products */}
-      <h2 className="text-3xl font-medium my-12 ml-20">Related Products</h2>
+      <h2 className="text-3xl font-medium my-12 xl:ml-20">Related Products</h2>
       <div className="flex flex-wrap justify-center gap-6 mt-4">
         {[
           { src: '/hero3.jpeg', name: 'Trenton modular sofa_3', price: 'Rs. 25,000.00' },
