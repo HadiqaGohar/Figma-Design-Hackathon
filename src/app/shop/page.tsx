@@ -72,32 +72,32 @@ function Shop() {
             </div>
 
             {/* Product List */}
-{/* Product List */}
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-    {item.map((item) => (
-        <div
-            key={item.id}
-            className="flex flex-col items-start text-left mx-auto p-4 rounded-lg w-full"
-        >
-            {/* Image Section */}
-            <div className="w-full h-[287px] flex items-center justify-center overflow-hidden ">
-                <Image
-                    src={item.src}
-                    alt={item.name}
-                    width={287}
-                    height={287}
-                    className="object-contain w-full h-full"
-                />
-            </div>
+            {/* Product List */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {item.map((item) => (
+                    <div
+                        key={item.id}
+                        className="flex flex-col items-start text-left mx-auto p-4 rounded-lg w-full"
+                    >
+                        {/* Image Section */}
+                        <div className="w-full h-[287px] flex items-center justify-center overflow-hidden ">
+                            <Image
+                                src={item.src}
+                                alt={item.name}
+                                width={287}
+                                height={287}
+                                className="object-contain w-full h-full"
+                            />
+                        </div>
 
-            {/* Text Section */}
-            <div className="mt-4">
-                <p className="text-sm font-medium">{item.name}</p>
-                <h3 className="text-lg font-semibold">{item.price}</h3>
+                        {/* Text Section */}
+                        <div className="mt-4">
+                            <p className="text-sm font-medium">{item.name}</p>
+                            <h3 className="text-lg font-semibold">{item.price}</h3>
+                        </div>
+                    </div>
+                ))}
             </div>
-        </div>
-    ))}
-</div>
 
 
 

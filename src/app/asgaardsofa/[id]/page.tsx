@@ -56,7 +56,7 @@ function AsgaardSofaId() {
           {/* Center: Big Image */}
           <div className="md:-ml-20 w-full md:w-2/4">
             <Image
-              src="/hero7.jpeg"
+              src="/shop/group4/img2.png"
               alt="Main Sofa Image"
               height={391}
               width={481}
