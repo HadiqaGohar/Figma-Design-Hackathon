@@ -68,13 +68,14 @@ function Footer() {
             <input
               type="email"
               placeholder="Enter Your Email Address"
-              className="font-medium px-4 py-2 bg-gray-100 border-b-2 border-black focus:ring-2 focus:ring-black focus:outline-none w-full"
+              className="font-medium text-sm py-2 border-b-2 border-black bg-gray-100 focus:outline-none w-full"
             />
-            <button className="px-6 py-2 font-medium text-black border-b-2 border-black hover:bg-black hover:text-white">
+            <button className="px-6 py-2 font-medium border-b-2 border-black  text-black hover:bg-black hover:text-white">
               Subscribe
             </button>
           </div>
         </div>
+
       </div>
 
       {/* Footer Bottom */}
