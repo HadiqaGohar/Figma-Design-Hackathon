@@ -101,7 +101,7 @@ function Blog() {
         {/* Sidebar Section */}
         <div className="mt-10 lg:w-1/4 p-6 gap-6">
           {/* Search Bar */}
-          <div className="p-6 rounded-lg">
+          <div className="p-3 rounded-lg">
             <div className="flex items-center rounded w-full border-2 border-gray-300 h-[58px]">
               <input
                 type="text"
