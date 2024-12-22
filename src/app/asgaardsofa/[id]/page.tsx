@@ -211,7 +211,7 @@ function AsgaardSofaId() {
     </div>
 
     {/* Second Product */}
-    <div className="flex flex-col text-left w-full sm:w-[287px] mt-10 sm:mt-0 md:mt-12">
+    <div className="flex flex-col text-left w-full sm:w-[287px] mt-10 sm:mt-0 md:mt-[35px]">
       <Image
         src='/shop/group1/img2.png'
         alt='Granite dining table with dining chair'
@@ -243,7 +243,7 @@ function AsgaardSofaId() {
     </div>
 
     {/* Fourth Product */}
-    <div className="flex flex-col text-left w-full sm:w-[287px] md:mt mt-10 sm:mt-0">
+    <div className="flex flex-col text-left w-full sm:w-[287px] md:mt-[35px] mt-10 sm:mt-0">
       <Image
         src='/shop/group1/img4.png'
         alt='Plain console with teak'
