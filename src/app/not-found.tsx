@@ -22,7 +22,7 @@ function NotFound() {
                 />
 
                 {/* Logo Image - Positioned Above Banner */}
-                <div className="absolute top-16 left-1/2 transform -translate-x-1/2 z-10">
+                <div className="absolute top-16 left-1/2 transform -translate-x-1/2 ">
                     <Image
                         src="/shop/logo.png" // Replace with your logo file path
                         alt="Shop Logo"
@@ -42,14 +42,15 @@ function NotFound() {
                     <p className="text-gray-700 text-xs md:text-xl flex items-center">
                         <Link href="/" className="font-bold hover:underline">Home</Link>
                         <span className="font-bold mx-2">{'>'}</span>
-                        <Link href="/not-found" className="hover:underline">404 Error</Link>
+                        <Link href="/not-found" className="hover:underline">404</Link>
                     </p>
                 </div>
             </div>
 
 
             <div className="text-center my-10">
-                <h2 className="text-3xl md:text-6xl font-medium">Page Not Found</h2>
+                <h2 className="text-xl md:text-3xl font-medium">Oops! Looks like something went wrong</h2>
+                {/* <p className='mt-4'>Page cannot be found! We’ll have it figured out in no time. Meanwhile, check out these fresh ideas:</p> */}
                 <Link href="/" aria-label="Go to Home Page">
                     <button className="mt-8 w-[175px] h-[40px] md:w-[255px] md:h-[64px] border border-black hover:bg-black hover:text-white transition duration-300">
                         Go To Home Page

@@ -68,8 +68,9 @@ function AsgaardSofaId() {
           <div className="w-full md:w-2/5">
             <h3 className="text-2xl font-medium">Asgaard Sofa</h3>
             <p className="text-xl text-gray-500">Rs: 250,000.00</p>
+            {/* Rating Star */}
             <div className="flex items-center space-x-2 mt-2">
-              <span className="text-yellow-500">⭐⭐⭐⭐⭐</span>
+              <span className="text-yellow-500"></span>
               <span className="text-gray-700 text-sm">(5 Customer Reviews)</span>
             </div>
             <p className="mt-4 text-gray-700 text-sm">
@@ -95,7 +96,7 @@ function AsgaardSofaId() {
             </div>
 
             {/* Color Options */}
-            <div className="mt-4">
+            {/* <div className="mt-4">
               <h4 className="font-semibold">Color</h4>
               <div className="flex gap-2 mt-2">
                 {colors.map((color, idx) => (
@@ -106,16 +107,16 @@ function AsgaardSofaId() {
                   ></div>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Quantity and Add to Cart */}
             <div className="flex flex-wrap items-center gap-4 mt-6">
-              <div className="flex items-center border p-2 gap-4">
+              {/* <div className="flex items-center border p-2 gap-4">
                 <button aria-label="Decrease quantity">-</button>
                 <span>1</span>
                 <button aria-label="Increase quantity">+</button>
-              </div>
-              <button className="bg-primary text-white px-6 py-2 rounded hover:bg-opacity-90">
+              </div> */}
+              <button className="bg-primary text-white bg-black w-full px-6 py-2 rounded hover:bg-opacity-90">
                 Add To Cart
               </button>
             </div>

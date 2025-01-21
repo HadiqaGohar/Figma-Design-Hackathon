@@ -91,3 +91,52 @@
   .scroll-delay-4s {
     animation-delay: 4s; /* 5-second delay */
   }
+
+
+
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white; /* Ya jo bhi background ho */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    opacity:95%;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+  
+
+
+
+.cart-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 250px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  z-index: 1000;
+}
+
+/* Sidebar transition */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  transform: translateX(100%); /* Sidebar initial state - hidden */
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.visible {
+  transform: translateX(0); /* Show the sidebar */
+}

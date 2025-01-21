@@ -106,11 +106,26 @@ function ViewCart() {
                             </tr>
                             <tr>
                                 <td colSpan={2} className="py-4">
-                                    <button className="w-full px-6 py-3 border border-black rounded-xl">
+
+                                    <Link href='/checkout'>
+                                    <button className="w-full px-6 py-3 border border-black hover:bg-black hover:text-white translate-x-1  rounded-xl">
                                         Checkout
                                     </button>
+                                    </Link>
                                 </td>
+
                             </tr>
+                            <div className="flex items-center mt-4">
+                                <input type="radio" id="bankTransfer" name="payment" className="mr-2" />
+                                <label htmlFor="bankTransfer" className="text-md">Direct Bank Transfer</label>
+                            </div>
+                            <Image
+                                src='/PayPal.png'
+                                alt='paypal'
+                                height={80}
+                                width={80}
+                            />
+                            {/* <p className="text-sm text-gray-400 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at arcu at eros malesuada facilisis.</p> */}
                         </tbody>
                     </table>
                 </div>

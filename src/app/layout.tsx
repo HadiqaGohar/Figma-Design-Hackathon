@@ -1,8 +1,23 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-// import Header from "./components/Header";
 import Footer from "./components/Footer";
+import App from "./components/App";
+import { StoreProvider } from "../redux/StoreProvider";
+
+// import dynamic from "next/dynamic";
+// import {
+//   // ClerkProvider,
+//   SignInButton,
+//   SignedIn,
+//   SignedOut,
+//   UserButton
+// } from '@clerk/nextjs'
+
+// const ClerkProvider = dynamic(() =>
+//   import("@clerk/nextjs").then(mod => mod.ClerkProvider),
+//   { ssr: false }
+// );
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,16 +28,27 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        
-        {children}
-        <Footer/>
-        </body>
+        {/* <ClerkProvider> */}
+          <StoreProvider>
+            <App>
+              {children}
+              {/* <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn> */}
+            </App>
+          </StoreProvider>
+          <Footer />
+        {/* </ClerkProvider> */}
+      </body>
     </html>
   );
 }
