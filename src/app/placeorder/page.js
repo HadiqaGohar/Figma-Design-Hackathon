@@ -53,7 +53,7 @@ function PlaceOrderScreen() {
 };
 
   return (
-    <div className="py-6 ">
+    <div className="py-6 px-3">
          <Header/>
       <div className="relative text-black">
         {/* Main Banner Image */}
@@ -123,7 +123,7 @@ function PlaceOrderScreen() {
       {/* Order Items Section */}
       <div className="bg-white shadow-lg p-5 rounded-lg mb-5 border border-gray-300">
         <h3 className="text-xl font-semibold mb-2">Order Items</h3>
-        <table className="min-w-full border-collapse">
+        <table className="min-w-full border-collapse text-xs md:text-sm">
           <thead className="border-b">
             <tr>
               <th className="md:p-4 py-4 px-1  text-left">Item</th>

@@ -21,3 +21,4 @@ export type RootState = ReturnType<typeof store.getState>; // Inferred type from
 
 // Optionally export the dispatch type as well
 export type AppDispatch = typeof store.dispatch;
+// ...

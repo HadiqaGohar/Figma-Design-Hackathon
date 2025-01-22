@@ -21,7 +21,7 @@ function CheackOut() {
                     width={1600}
                     className="w-full h-40 md:h-auto object-cover"
                 />
-
+{/* ... */}
                 {/* Logo Image - Positioned Above Banner */}
                 <div className="absolute top-16 left-1/2 transform -translate-x-1/2 z-10">
                     <Image

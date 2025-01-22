@@ -7,7 +7,7 @@ const initialState = Cookies.get("wishlist")
   : {
       wishlistItems: [],
     };
-
+// ...
 const wishlistSlice = createSlice({
   name: "wishlist",
   initialState,

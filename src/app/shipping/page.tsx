@@ -21,6 +21,7 @@ interface CartState {
 interface RootState {
   cart: CartState;
 }
+// ...
 
 interface ShippingAddress {
   fullName: string;

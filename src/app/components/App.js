@@ -33,11 +33,12 @@ function App({ children }) {
           ? ''  // Add margin when the sidebar is visible
           : ''
         }`}>
-        {/* <TopText/> */}
-        {/* <Header /> */}
-        <main>{children}
-          {/* Conditionally render CartSidebar based on showSidebar */}
-
+      
+        <main>
+          
+          
+          {children}
+     
 
         </main>
         <div className={showSidebar ? '' : 'hidden'}>
@@ -48,7 +49,7 @@ function App({ children }) {
 
       {/* <Footer /> */}
       <Toaster
-        position='bottom-right'
+        position='top-center'
         toastOptions={{
           style: {
             background: "#000000",

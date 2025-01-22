@@ -9,7 +9,7 @@ function Asgaard() {
       href: "/asgaardsofa/1",
     },
   ];
-
+// ....
   return (
     <div>
       <div className="flex flex-col xl:flex-row xl:w-[1440px] xl:h-[777px] items-center text-center bg-[#FFF9E5]">

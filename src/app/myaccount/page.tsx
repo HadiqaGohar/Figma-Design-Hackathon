@@ -10,6 +10,7 @@ function MyAccount() {
             <div className="bg-gray-100">
                 <Header />
             </div>
+            {/* ... */}
             {/* Banner Section */}
             {/* Banner Section */}
             <div className="relative text-black">

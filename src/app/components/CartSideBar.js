@@ -16,7 +16,9 @@ function CartSidebar() {
   const [isOpen, setIsOpen] = React.useState(true);
 
   const addToCartHandler = (product, qty) => {
-    dispatch(addToCart({ ...product, qty }));
+    if (product.countInStock > 0 && qty <= product.countInStock) {
+      dispatch(addToCart({ ...product, qty }));
+    }
   };
 
   const removeFromCartHandler = (id) => {
@@ -44,7 +46,7 @@ function CartSidebar() {
           ? ""
           : cartItems.length > 0 &&
             (pathname === "/" || pathname.indexOf("/shop/") >= 0)
-            ? `fixed top-0  right-0 h-full w-[250px] shadow-lg border-l border-gray-300 overflow-y-auto bg-white transition-transform ease-in-out duration-300 ${isOpen ? "block" : "hidden"}`
+            ? `fixed top-0  right-0 h-full w-[280px] shadow-lg border-l border-gray-300 overflow-y-auto bg-white transition-transform ease-in-out duration-300 ${isOpen ? "block" : "hidden"}`
             : "hidden"
       }
     >
@@ -73,31 +75,33 @@ function CartSidebar() {
             >
               <Link href={`/shop/${item.id}`} className="flex items-center space-x-4">
                 <div className="w-1/2">
-                  {/* <img
+                  <Image
                     src={item.image ? urlFor(item.image).width(100).height(100).url() : "/images/default-product.jpg"}
                     alt={item.name || "Product Image"}
                     width={100}
                     height={100}
-                  /> */}
-                    <Image
-                          src={item.image ? urlFor(item.image).width(100).height(100).url() : "/images/default-product.jpg"}
-                          alt={item.name || "Product Image"}
-                          width={100}
-                          height={100}
-                          className="p-1 rounded"
-                        />
+                    className="p-1 rounded"
+                  />
                 </div>
                 <div className="w-1/2">
                   <div className="text-md font-semibold">{item.name}</div>
                   <div className="text-sm mt-3 text-gray-500">Price: ${item.price}</div>
+                  <div className="text-sm mt-3 text-gray-500">
+                    Stock: {item.countInStock > 0 ? item.countInStock : "Out of Stock"}
+                  </div>
                 </div>
               </Link>
+
+              {item.countInStock === 0 && (
+                <div className="text-sm text-red-500 mt-2">Out of Stock</div>
+              )}
 
               <div className="flex justify-between items-center mt-3 w-full">
                 <div className="flex items-center border p-2 space-x-2 my-2">
                   <button
                     onClick={() => addToCartHandler(item, item.qty > 1 ? item.qty - 1 : 1)}
                     className="bg-gray-200 p-2 hover:bg-gray-300"
+                    disabled={item.countInStock === 0}
                   >
                     -
                   </button>
@@ -105,6 +109,7 @@ function CartSidebar() {
                   <button
                     onClick={() => addToCartHandler(item, item.qty + 1)}
                     className="bg-gray-200 p-2 hover:bg-gray-300"
+                    disabled={item.countInStock === 0 || item.qty >= item.countInStock}
                   >
                     +
                   </button>
@@ -121,20 +126,23 @@ function CartSidebar() {
           ))}
 
           {/* Fixed content at the bottom */}
-          <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col border-gray-200 bg-white">
-            <div className="flex justify-between border-b my-5">
-              <div className="text-lg font-semibold">Subtotal</div>
-              <div className="text-xl font-bold text-teal-600 mb-4">${itemsPrice}</div>
-            </div>
-            <div className="flex justify-between w-full gap-4">
-              <Link href="/cart" className="w-full text-center py-3 rounded-2xl border-2 text-teal-600 border-teal-600 transition-all hover:bg-teal-600 hover:text-white">
-                View Cart
-              </Link>
-              <Link href="/checkout" className="w-full text-center py-3 rounded-2xl border-2 text-teal-600 border-teal-600 transition-all hover:bg-teal-600 hover:text-white">
-                Checkout
-              </Link>
+          <div className="w-[280px] fixed bottom-0 right-0 z-10">
+            <div className="p-4 flex flex-col border-gray-200 bg-white">
+              <div className="flex justify-between border-b my-5">
+                <div className="text-lg font-semibold">Subtotal</div>
+                <div className="text-xl font-bold text-yellow-600 mb-4">${itemsPrice}</div>
+              </div>
+              <div className="flex justify-between w-full gap-4">
+                <Link href="/cart" className="w-full text-center py-3 rounded-full border-2 text-black border-black transition-all hover:bg-black hover:text-white">
+                  View Cart
+                </Link>
+                <Link href="/checkout" className="w-full text-center py-3 rounded-full border-2 text-black border-black transition-all hover:bg-black hover:text-white">
+                  Checkout
+                </Link>
+              </div>
             </div>
           </div>
+
         </>
       )}
     </div>

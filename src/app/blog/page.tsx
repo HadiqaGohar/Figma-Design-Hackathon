@@ -15,7 +15,7 @@ function Blog() {
       <div className="bg-[#faf4f4]">
         <Header />
       </div>
-
+{/* ... */}
       {/* Banner Section */}
       <div className="relative text-black">
         {/* Main Banner Image */}

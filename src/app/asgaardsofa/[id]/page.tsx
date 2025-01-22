@@ -122,7 +122,7 @@ function AsgaardSofaId() {
             </div>
 
             <hr className="my-6" />
-
+{/* ... */}
             {/* Additional Information */}
             <div className="space-y-4">
               <div className="flex justify-between">

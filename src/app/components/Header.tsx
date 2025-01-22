@@ -1,59 +1,70 @@
 'use client';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { FaRegUser } from 'react-icons/fa';
 import { FiSearch } from 'react-icons/fi';
 import { IoMdHeartEmpty } from 'react-icons/io';
-import { HiOutlineMenu, HiOutlineX } from 'react-icons/hi'; // Import icons for menu toggle
+import { HiOutlineMenu, HiOutlineX } from 'react-icons/hi';
 import { useSelector } from 'react-redux';
-import { RiShoppingBag4Fill } from 'react-icons/ri';
 import { usePathname } from 'next/navigation';
-// import { RootState } from '@/redux/store';
+import { SignedIn, SignedOut, useClerk, UserButton } from '@clerk/nextjs';
 
 
 interface CartState {
     loading: boolean;
-    cartItems: any[]; // Replace 'any' with a more specific type if possible
-    wishlistItems : any[]
-  }
-  
-  interface RootState {
+    cartItems: any[];
+    wishlistItems: any[];
+}
+
+interface RootState {
     cart: CartState;
-    wishlist : CartState
-  }
-  
+    wishlist: CartState;
+}
 
 function Header() {
-    // ................ Redux ...................
-    // const { loading, cartItems } = useSelector((state) => state.cart);
+    const { openSignIn } = useClerk(); // Use Clerk's hook to check if signed in and open sign-in modal
+
+
+    const handleSignInClick = () => {
+        openSignIn();
+    };
+
     const { loading, cartItems } = useSelector((state: RootState) => state.cart);
-
     const pathname = usePathname();
-
-    // Calculate total items in the wishlist
-
-    const { wishlistItems } = useSelector((state : RootState) => state.wishlist); // Accessing wishlist items
-
+    const { wishlistItems } = useSelector((state: RootState) => state.wishlist);
     const wishlistCount = wishlistItems ? wishlistItems.length : 0;
 
-
-
-
-
-
-
-    // ...........................................
-
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
-    // Toggle menu visibility
+    const headerRef = useRef<HTMLHeadElement>(null);
+
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <header>
+        <header
+            ref={headerRef}
+            className={`fixed top-0 left-0 w-full z-10 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}
+        >
             <div className="flex justify-between items-center mx-auto max-w-screen-2xl p-4">
                 {/* Mobile Menu Button */}
                 <button
@@ -84,13 +95,11 @@ function Header() {
 
                 {/* Icons */}
                 <div className="flex gap-3 md:space-x-12 md:mr-32 items-center">
-                    <Link href='/myaccount'>
-                        <FaRegUser aria-label="User Profile" size={20} />
-                    </Link>
-                    <Link href='/search'>
+
+                    {/* <Link href='/search'>
                         <FiSearch aria-label="Search" size={22} />
-                    </Link>
-                    <div className="relative">
+                    </Link> */}
+                    <div className="relative ">
                         <Link href="/wishlist" className="relative">
                             <IoMdHeartEmpty aria-label="Favorites" size={25} />
                         </Link>
@@ -103,7 +112,6 @@ function Header() {
                         </span>
                     </div>
 
-
                     <div className="relative">
                         <Link href='/cart'>
                             <div className="flex items-center">
@@ -114,6 +122,28 @@ function Header() {
                             </span>
                         </Link>
                     </div>
+                    <div className=" transition-colors cursor-pointer">
+                        <button
+                            onClick={handleSignInClick}
+                            className="transition-colors cursor-pointer"
+                        >
+                            <span className="flex items-center">
+                                <SignedOut>
+                                    {/* Show icon if signed out */}
+                                    <FaRegUser  aria-label="User Profile" size={20} />
+                                </SignedOut>
+
+                                <SignedIn>
+                                    {/* Hide the icon once signed in and show the UserButton */}
+                                    <UserButton />
+                                </SignedIn>
+                            </span>
+                        </button>
+                        {/* ... */}
+                    </div>
+                    {/* <Link href='/myaccount'>
+                        <FaRegUser aria-label="User Profile" size={20} />
+                    </Link> */}
                 </div>
             </div>
 
@@ -132,13 +162,13 @@ function Header() {
                 </div>
                 <ul className="flex flex-col items-center font-bold space-y-6 py-8">
                     <li>
-                        <Link href="/" aria-label="Navigate to Home" className="hover:underline">Home</Link>
+                        <Link href="/" aria-label="Navigate to Home" className="hover:underline ">Home</Link>
                     </li>
                     <li>
-                        <Link href="/shop" aria-label="Navigate to Shop" className="hover:underline">Shop</Link>
+                        <Link href="/shop" aria-label="Navigate to Shop" className="hover:underline ">Shop</Link>
                     </li>
                     <li>
-                        <Link href="/blog" aria-label="Navigate to Blog" className="hover:underline">Blog</Link>
+                        <Link href="/blog" aria-label="Navigate to Blog" className="hover:underline ">Blog</Link>
                     </li>
                     <li>
                         <Link href="/contact" aria-label="Navigate to Contact" className="hover:underline">Contact</Link>
@@ -150,4 +180,3 @@ function Header() {
 }
 
 export default Header;
-

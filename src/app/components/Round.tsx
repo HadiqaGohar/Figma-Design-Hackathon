@@ -28,7 +28,7 @@ function Round() {
                     <h2 className="text-sm font-bold mt-2">24/7 CUSTOMER SERVICE</h2>
                     <p className="text-xs sm:text-sm">Friendly 24/7 customer support</p>
                 </div>
-
+{/* ... */}
                 {/* MONEY BACK GUARANTEE */}
                 <div className="flex flex-col items-center text-center">
                     <div className="bg-[#C1C1C1] rounded-full h-[70px] w-[70px] p-2.5 flex items-center justify-center">

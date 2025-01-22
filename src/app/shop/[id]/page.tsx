@@ -95,9 +95,9 @@ const ProductPage = ({ params }: { params: { id: string } }) => {
     return (
         <div className="md:mx-auto mx-2 ">
             {/* Header Section */}
-            <div className="bg-[#faf4f4]">
+            {/* <div className="bg-[#faf4f4]">
                 <Header />
-            </div>
+            </div> */}
 
             {/* Product Details Section */}
             <div className="max-w-screen-2xl  container mx-auto flex flex-col  md:flex-row gap-6 my-12 md:my-24">

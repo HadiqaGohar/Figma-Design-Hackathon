@@ -37,5 +37,5 @@ function ShopLine() {
     </div>
   )
 }
-
+// ...
 export default ShopLine

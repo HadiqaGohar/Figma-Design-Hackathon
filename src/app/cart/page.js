@@ -50,7 +50,7 @@ function CartPage() {
   return (
     <div className="">
       <Header />
-      <div className="relative text-black">
+      <div className="relative text-gray-800">
         {/* Main Banner Image */}
         <Image
           src="/shop/shop.png" // Replace with the correct image file path
@@ -61,7 +61,7 @@ function CartPage() {
         />
 
         {/* Logo Image - Positioned Above Banner */}
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 ">
           <Image
             src="/shop/logo.png" // Replace with your logo file path
             alt="Shop Logo"
@@ -81,7 +81,7 @@ function CartPage() {
           <p className="text-gray-700 text-xs md:text-xl flex items-center">
             <Link href="/" className="font-bold hover:underline">Home</Link>
             <span className="font-bold mx-2">{'>'}</span>
-            <Link href="/checkout" className="hover:underline">Cart</Link>
+            <Link href="/cart" className="hover:underline">Cart</Link>
           </p>
         </div>
       </div>
@@ -119,7 +119,7 @@ function CartPage() {
                           width={80}
                           height={80}
                         /> */}
-                          <Image
+                        <Image
                           src={item.image ? urlFor(item.image).width(100).height(100).url() : "/images/default-product.jpg"}
                           alt={item.name || "Product Image"}
                           width={80}
@@ -127,24 +127,40 @@ function CartPage() {
                           className="p-1 rounded"
                         />
                         <span className='text-xs md:text-sm'>{item.name}</span>
+
+
                       </Link>
+                      {item.countInStock === 0 && (
+                        <div className="text-sm text-red-500 mt-2">Out of Stock</div>
+                      )}
                     </td>
-                    <td className="md:p-4 py-4 px-1 text-right">
-                      <div className="flex flex-col md:flex-row  items-center  p-1 space-x-2 my-2 justify-center">
+
+                    {item.countInStock === 0 && (
+                      <div className="text-sm text-red-500 mt-2">Out of Stock</div>
+                    )}
+
+                    <td className=" md:p-4 md:py-4 md:px-1  text-right">
+                      <div className="flex items-center  p-2 space-x-2 my-2">
                         <button
                           onClick={() => addToCartHandler(item, item.qty > 1 ? item.qty - 1 : 1)}
-                          className="bg-gray-200 py-0.5 px-2.5 ml-2 font-bold rounded-full hover:bg-gray-300"
+                          className="md:bg-gray-200 px-1.5 md:px-3 text-lg font-bold rounded-full hover:bg-gray-300"
+                          disabled={item.countInStock === 0}
                         >
                           -
                         </button>
-                        <div className=" md:text-lg font-semibold">{item.qty}</div>
+                        <div className="text-sm md:text-lg font-semibold">{item.qty}</div>
                         <button
                           onClick={() => addToCartHandler(item, item.qty + 1)}
-                          className="bg-gray-200 py-0.5 px-2 ml-2 font-bold rounded-full hover:bg-gray-300"
+                          className="md:bg-gray-200 px-1 md:px-2.5 text-lg font-bold rounded-full hover:bg-gray-300"
+                          disabled={item.countInStock === 0 || item.qty >= item.countInStock}
                         >
                           +
                         </button>
+
                       </div>
+                      {/* <div className="text-sm mt-3 text-gray-500">
+                       Available Stock: {item.countInStock > 0 ? item.countInStock : "Out of Stock"}
+                      </div> */}
                     </td>
                     <td className="text-xs md:text-sm md:p-4 py-4 px-1 text-right text-yellow-600">${item.price}</td>
                     <td className="md:p-4 py-4 px-2 text-center">
@@ -161,7 +177,7 @@ function CartPage() {
               </tbody>
             </table>
           </div>
-          
+
           <div className="bg-[#FFF9E5] p-5 shadow-md h-72 rounded-lg">
 
             <h2 className="text-2xl font-semibold mb-4 text-center">Cart Totals</h2>

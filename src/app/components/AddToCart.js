@@ -42,6 +42,7 @@ function AddToCart({
                 }
             }
         }
+        
 
         // Dispatch action to Redux store
         dispatch(addToCart({ ...product, qty: newQty }));

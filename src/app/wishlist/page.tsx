@@ -10,13 +10,13 @@ import Link from 'next/link';
 import { AiOutlineDelete, AiOutlineShoppingCart } from 'react-icons/ai';
 import Round from "../components/Round";
 import Header from '../components/Header';
-import { urlFor } from "../../sanity/lib/image"; // Import Sanity URL transformation function
+import { urlFor } from "../../sanity/lib/image";
 import { SanityImageSource } from '@sanity/image-url/lib/types/types';
 
 
 interface CartState {
   loading: boolean;
-  cartItems: any[]; // Replace 'any' with a more specific type if possible
+  cartItems: any[]; 
   wishlistItems: any[]
 }
 
@@ -94,7 +94,7 @@ function WishlistPage() {
       </div>
 
       <div className='max-w-screen-2xl mx-auto'>
-        {/* <div className="text-3xl font-bold text-teal-600 mb-6">Your Wishlist</div> */}
+       
 
         <div className="text-2xl text-center md:text-left my-8 md:text-3xl font-bold text-yellow-600 mb-6">Your Wishlist</div>
         <div className="grid sm:grid-cols-1 md:grid-cols-4 gap-4">
@@ -114,12 +114,7 @@ function WishlistPage() {
                     <td className="md:p-4 py-4 px-1 flex items-center">
                       <Link href={`/products/${item.id}`} className="flex items-center space-x-4">
                        
-                        {/* <img
-                          src={item.image ? urlFor(item.image).width(100).height(100).url() : "/images/default-product.jpg"}
-                          alt={item.name || "Product Image"}
-                          width={80}
-                          height={80}
-                        /> */}
+                       
                         <Image
                           src={item.image ? urlFor(item.image).width(100).height(100).url() : "/images/default-product.jpg"}
                           alt={item.name || "Product Image"}

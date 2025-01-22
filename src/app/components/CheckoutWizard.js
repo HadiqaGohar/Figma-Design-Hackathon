@@ -1,6 +1,7 @@
 import React from 'react'
 
 function CheckoutWizard({ activeStep = 0 }) {
+    // ...
     return (
         <div className='text-xs md:text-lg my-6 mx-auto mb-5 flex flex-wrap'>
             {['User Login', 'Shipping Address', 'Payment Method', 'Place Order'].map(

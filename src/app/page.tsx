@@ -11,7 +11,7 @@ function Home() {
     <div className='w-full-2xl mx-auto'>
 
       <Hero />
-
+{/* .. */}
       {/* <p>{amount}</p>
       <Elements
         stripe={stripePromise}

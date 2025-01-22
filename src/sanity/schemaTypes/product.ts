@@ -14,6 +14,7 @@ const productSchema = {
       type: 'string',
       title: 'Product Name',
     },
+    // ...
     {
       name: 'description',
       type: 'string',

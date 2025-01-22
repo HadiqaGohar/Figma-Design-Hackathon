@@ -10,7 +10,7 @@ function AddToWishlist({ product }) {
   const dispatch = useDispatch();
 
   const wishlistItems = useSelector((state) => state.wishlist.wishlistItems);
-
+// ...
   const addToWishlistHandler = () => {
     const existItem = wishlistItems.find((x) => x.id === product.id);
     if (existItem) {

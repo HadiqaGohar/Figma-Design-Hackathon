@@ -9,9 +9,7 @@ import Asgaard from '../asgaardsofa/page'
 function Hero() {
     return (
         <div className=' text-[#000000] mx-auto max-w-screen-2xl flex flex-col '>
-            <div className='bg-[#FBEBB5]'>
-                <Header />
-            </div>
+          
             {/* SECTION 1 */}
 
             <div className="bg-[#FBEBB5] mx-auto max-w-screen-2xl flex flex-col md:flex-row w-full h-auto md:h-[900px] items-center px-4">
@@ -20,7 +18,7 @@ function Hero() {
                     <h1 className="scroll-animate-left  text-[32px] md:text-[64px] font-medium leading-tight">
                         Rocket Single Seater
                     </h1>
-                    <Link href="/" aria-label="Shop for Rocket Single Seater">
+                    <Link href="/shop" aria-label="Shop for Rocket Single Seater">
                         <p className="scroll-animate-left scroll-delay-1s text-[18px] md:text-[24px] mt-4 md:mt-8 font-medium underline underline-offset-8">
                             Shop Now
                         </p>
@@ -170,27 +168,6 @@ function Hero() {
                 </div>
             </div>
 
-
-            {/* SECTION 4 */}
-            {/* <div className='flex flex-col xl:flex-row xl:w-[1440px] xl:h-[777px] items-center text-center bg-[#FFF9E5]'>
-                <div>
-                    <Image
-                        src='/hero/sec4img1.png'
-                        height={799}
-                        width={983}
-                        alt=''
-                        className='w-auto h-auto scroll-animate-right'
-                    />
-
-                </div>
-                <div className=''>
-                    <h4 className='text-[18px] md:text-[24px] scroll-animate-right scroll-delay-1s'>New Arrivals</h4>
-                    <h2 className='text-[30px] md:text-[48px] font-bold scroll-animate-right scroll-delay-2s'>Asgaard sofa</h2>
-                    <Link href='/asgaardsofa/'>
-                        <button className='scroll-animate-right scroll-delay-3s mt-8 w-[175px] h-[40px] md:w-[255px] md:h-[64px] border border-black hover:bg-black hover:text-white transition duration-300'>Order Now</button>
-                    </Link>
-                </div>
-            </div> */}
 
             <Asgaard/>
 
