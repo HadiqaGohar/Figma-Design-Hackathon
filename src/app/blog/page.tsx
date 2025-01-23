@@ -28,7 +28,7 @@ function Blog() {
         />
 
         {/* Logo Image - Positioned Above Banner */}
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 ">
           <Image
             src="/shop/logo.png" // Replace with your logo file path
             alt="Shop Logo"
@@ -70,7 +70,7 @@ function Blog() {
                 alt={`Image for ${post.title}`}
                 className="rounded-t-lg"
               />
-              <div className="flex items-center space-x-4 mt-3 text-sm text-gray-600">
+              <div className="flex items-center space-x-4 mt-3 text-xs md:text-sm text-gray-600">
                 <div className="flex items-center space-x-1">
                   <FaUserLarge />
                   <p>Admin</p>
@@ -84,8 +84,8 @@ function Blog() {
                   <p>{post.category}</p>
                 </div>
               </div>
-              <h2 className="text-[30px] font-semibold mt-4">{post.title}</h2>
-              <p className="mt-2 text-gray-700 text-[15px] line-clamp-4">
+              <h2 className="text-[16px] sm:text-[20px] md:text-[22px] lg:text-[25px] xl:text-[28px] 2xl:text-[30px] font-semibold mt-4">{post.title}</h2>
+              <p className="mt-2 text-gray-700 text-xs sm:text-[15px] line-clamp-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in. Cursus mattis molestie a iaculis at erat. Nibh cras pulvinar mattis nunc sed blandit libero. Pellentesque elit ullamcorper dignissim cras tincidunt. Pharetra et ultrices neque ornare aenean euismod elementum.
               </p>
               <Link
@@ -99,10 +99,10 @@ function Blog() {
         </div>
 
         {/* Sidebar Section */}
-        <div className="mt-10 lg:w-1/4 p-6 gap-6">
+        <div className="mt-10 lg:w-1/4 md:p-6 md:gap-6">
           {/* Search Bar */}
           <div className="p-3 rounded-lg">
-            <div className="flex items-center rounded w-full border-2 border-gray-300 h-[58px]">
+            <div className="flex items-center rounded w-full border-2 border-gray-300 md:h-[58px]">
               <input
                 type="text"
                 placeholder="Search"
@@ -156,7 +156,7 @@ function Blog() {
       </div>
 
       <div className="justify-center mx-auto text-center">
-        <Page />
+        {/* <Page /> */}
         <Field />
       </div>
     </div>

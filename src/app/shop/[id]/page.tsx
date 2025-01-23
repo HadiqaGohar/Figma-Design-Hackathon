@@ -94,11 +94,7 @@ const ProductPage = ({ params }: { params: { id: string } }) => {
 
     return (
         <div className="md:mx-auto mx-2 ">
-            {/* Header Section */}
-            {/* <div className="bg-[#faf4f4]">
-                <Header />
-            </div> */}
-
+         
             {/* Product Details Section */}
             <div className="max-w-screen-2xl  container mx-auto flex flex-col  md:flex-row gap-6 my-12 md:my-24">
                 {/* Image Section */}
@@ -114,26 +110,27 @@ const ProductPage = ({ params }: { params: { id: string } }) => {
 
                 {/* Text Section */}
                 <div className="w-full md:w-1/2 my-auto">
-                    <h1 className="text-2xl md:text-4xl font-semibold">{product.name}</h1>
-                    <h2 className="text-md md:text-xl font-semibold mt-4 bg-yellow-700 text-white w-24 md:w-20 rounded-full p-1.5 md:p-2">${product.price} </h2>
+                    <h1 className="text-xl sm:text-2xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-semibold">{product.name}</h1>
+
+                    <h2 className="text-xs sm:text-sm md:text-lg lg:text-xl font-semibold mt-4 bg-yellow-700 text-white w-14 md:w-20  rounded-full p-1.5 md:p-2">${product.price} </h2>
                     <div className='flex'>
                         {/* Render Stars instead of rating number */}
-                        <div className="flex items-center mt-2">
+                        <div className="flex text-xs md:text-sm lg:text-md items-center mt-2">
                             {renderStars(product.rating)}
 
                         </div>
-                        <span className="ml-3 mt-2">({product.ratingCount} reviews)</span>
+                        <span className="ml-3 mt-2 text-xs md:text-sm">({product.ratingCount} reviews)</span>
                     </div>
                     <hr className='mt-4 h-0.5' />
-                    <p className="text-md md:text-lg text-gray-700 my-4">{product.description}</p>
+                    <p className="text-md md:text-lg text-gray-700 my-4 text-xs md:text-">{product.description}</p>
 
-                    <span className="ml-3 mt-2 text-yellow-500 font-medium">({product.countInStock} items in stock)</span>
+                    <span className="ml-3 mt-2 text-yellow-500 font-medium text-xs md:text-sm">({product.countInStock} items in stock)</span>
 
                     {/* Add to Cart Button with Cart Icon */}
                     <div className='flex flex-col md:flex-row gap-2'>
                    
 
-                        <div className='ml-12 md:mt-7'>
+                        <div className=' mt-4 md:ml-12 md:mt-7'>
                             <AddToCart
                                 showQty={false}
                                 product={product}
@@ -143,7 +140,7 @@ const ProductPage = ({ params }: { params: { id: string } }) => {
                             />
                         </div>
 
-                        <div className='md:ml-8 mt-7'>
+                        <div className='my-2 md:ml-8 md:mt-7'>
                             <AddToWishlist
                                 // showQty={false}
                                 product={product}
@@ -159,7 +156,7 @@ const ProductPage = ({ params }: { params: { id: string } }) => {
                     </div>
                     <hr className='mt-6' />
                     {/* Additional Information */}
-                    <div className="space-y-4 mt-6">
+                    <div className="space-y-4 mt-6 text-xs md:text-sm">
                         <div className="flex justify-between">
                             <span>SKU:</span>
                             <span>{product.sku}</span>
@@ -174,10 +171,10 @@ const ProductPage = ({ params }: { params: { id: string } }) => {
                         </div>
                         <div className="flex justify-between items-center mt-4">
                             <span>Share:</span>
-                            <div className="flex space-x-2">
-                                <BsFacebook className="cursor-pointer" size={25} />
-                                <FaLinkedin className="cursor-pointer" size={25} />
-                                <FaTwitter className="cursor-pointer" size={25} />
+                            <div className="flex space-x-2 ">
+                                <BsFacebook className="cursor-pointer hover:text-yellow-500" size={25} />
+                                <FaLinkedin className="cursor-pointer hover:text-yellow-500" size={25} />
+                                <FaTwitter className="cursor-pointer hover:text-yellow-500" size={25} />
                             </div>
                         </div>
                     </div>

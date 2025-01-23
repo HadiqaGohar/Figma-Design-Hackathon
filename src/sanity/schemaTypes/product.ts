@@ -14,6 +14,7 @@ const productSchema = {
       type: 'string',
       title: 'Product Name',
     },
+    
     // ...
     {
       name: 'description',
@@ -58,6 +59,12 @@ const productSchema = {
       type: 'string',
       title: 'Category',
     },
+    {
+      name: 'topPicks',
+      type: 'string',
+      title: 'Top Picks',
+    },
+    
     {
       name: 'image',
       type: 'image',

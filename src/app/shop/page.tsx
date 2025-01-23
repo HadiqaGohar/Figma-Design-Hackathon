@@ -99,11 +99,11 @@ function Shop() {
             <div className='max-w-screen-2xl mx-auto'>
                 {/* Search bar to filter products */}
             <div className="w-full md:w-[350px] mx-auto md:mr-6 my-6 flex items-center justify-end">
-                <div className="relative w-full">
+                <div className="mx-3 relative w-full">
                     <input
                         type="text"
                         placeholder="Search products..."
-                        className="w-full py-2.5 pl-9 pr-16 border-2 border-gray-300 rounded-full text-lg text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300 ease-in-out"
+                        className="w-full py-1 md:py-2.5 pl-9 pr-16 border-2 border-gray-300 rounded-full text-lg text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300 ease-in-out"
                         onChange={(e) => setSearch(e.target.value)}
                         value={search}
                     />
@@ -154,9 +154,9 @@ function Shop() {
             </div>
 
             {/* Pagination */}
-            <div className="flex justify-center mt-8">
+            {/* <div className="flex justify-center mt-8">
                 <Page />
-            </div>
+            </div> */}
 
             {/* Field Component */}
             <Field />

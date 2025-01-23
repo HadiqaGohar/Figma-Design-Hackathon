@@ -136,9 +136,9 @@ function CartSidebar() {
                 <Link href="/cart" className="w-full text-center py-3 rounded-full border-2 text-black border-black transition-all hover:bg-black hover:text-white">
                   View Cart
                 </Link>
-                <Link href="/checkout" className="w-full text-center py-3 rounded-full border-2 text-black border-black transition-all hover:bg-black hover:text-white">
+                {/* <Link href="/checkout" className="w-full text-center py-3 rounded-full border-2 text-black border-black transition-all hover:bg-black hover:text-white">
                   Checkout
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

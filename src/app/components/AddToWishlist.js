@@ -24,7 +24,7 @@ function AddToWishlist({ product }) {
   return (
     <button
       onClick={addToWishlistHandler}
-      className="px-4 py-2 text-lg hover:bg-yellow-500 bg-yellow-700 text-white rounded-lg flex items-center"
+      className=" hover:bg-yellow-500 bg-yellow-700 text-white  md:mt-6 px-6 py-2 text-sm  md:text-lg font-medium rounded-lg shadow-lg flex items-center justify-center transform transition-all duration-300 hover:scale-105 focus:outline-none"
     >
       <AiFillHeart className="mr-2" size={20} /> Add to Wishlist
     </button>

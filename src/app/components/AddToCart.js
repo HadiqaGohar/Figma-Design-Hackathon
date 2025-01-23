@@ -70,16 +70,16 @@ function AddToCart({
                     </div>
                 </div>
             )}
-            <div className='flex justify-center md:-ml-10'>
+            <div className='flex md:-ml-10'>
                 {product.countInStock > 0 ? (
                     <button
-                        className='className="md:mt-6 px-6 py-2 bg-gray-800 text-white text-lg font-medium rounded-lg shadow-lg flex items-center justify-center transform transition-all duration-300 hover:bg-gray-600 hover:scale-105 focus:outline-none"'
+                        className='md:mt-6 px-6 py-2 bg-gray-800 text-white text-sm md:text-lg font-medium rounded-lg shadow-lg flex items-center justify-center transform transition-all duration-300 hover:bg-gray-600 hover:scale-105 focus:outline-none'
                         onClick={addToCartHandler}
                     >
                     <RiShoppingCartFill className="mr-2" size={20} />     Add to Cart
                     </button>
                 ) : (
-                    <button disabled className='bg-gray-400 text-white h-12 w-[80%] rounded-xl my-8 shadow-lg'>
+                    <button disabled className='bg-gray-400 text-white md:mt-6 px-6 py-2 text-sm md:text-lg font-medium rounded-lg shadow-lg flex items-center justify-center transform transition-all duration-300 hover:bg-gray-600 hover:scale-105 focus:outline-none'>
                         Out of Stock
                     </button>
                 )}

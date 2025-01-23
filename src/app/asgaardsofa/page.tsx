@@ -6,7 +6,7 @@ function Asgaard() {
   const products = [
     {
       id: 1,
-      href: "/asgaardsofa/1",
+      href: "/shop/14",
     },
   ];
 // ....
@@ -35,7 +35,7 @@ function Asgaard() {
           {products.map((product) => (
             <div key={product.id}>
               <Link href={product.href}>
-                <button className="scroll-animate-right scroll-delay-3s mt-8 w-[175px] h-[40px] md:w-[255px] md:h-[64px] border border-black hover:bg-black hover:text-white transition duration-300">
+                <button className="scroll-animate-right scroll-delay-3s my-8 w-[175px] h-[40px] md:w-[255px] md:h-[64px] border border-black hover:bg-black hover:text-white transition duration-300">
                   Order Now
                 </button>
               </Link>

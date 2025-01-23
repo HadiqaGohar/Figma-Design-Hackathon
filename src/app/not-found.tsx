@@ -6,46 +6,41 @@ import Link from 'next/link'
 function NotFound() {
     return (
 
-        <div className="max-w-screen-2xl container mx-auto pb-8 px-4">
-            <div className='bg-[#faf4f4]'>
-                <Header />
-            </div>
-            {/* Banner Section */}
-            <div className="relative text-black">
-                {/* Main Banner Image */}
+        <div className="">
+           {/* Banner Section */}
+           <div className="relative text-black">
                 <Image
-                    src="/shop/shop.png" // Replace with the correct image file path
+                    src="/shop/shop.png"
                     alt="Shop Banner"
                     height={400}
                     width={1600}
-                    className="w-full h-40 md:h-auto object-cover"
+                    className="w-full h-40 md:h-[400px] object-cover"
                 />
-
-                {/* Logo Image - Positioned Above Banner */}
-                <div className="absolute top-16 left-1/2 transform -translate-x-1/2 ">
+                <div className="absolute top-16 left-1/2 transform -translate-x-1/2">
                     <Image
-                        src="/shop/logo.png" // Replace with your logo file path
+                        src="/shop/logo.png"
                         alt="Shop Logo"
                         height={77}
                         width={77}
-                        className="object-contain"
+                        className="object-contain w-[50px] h-[50px] md:h-[77px] md:w-[77px] translate-y-4"
                     />
                 </div>
-
-                {/* Main Heading */}
-                <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:text-[48px] text-[24px] font-medium  -mt-4 md:mt-0">
-                    404 Error
+                <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[24px] md:text-[48px] font-medium">
+                    Not Found
                 </h1>
-
-                {/* Breadcrumb Section */}
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-14">
-                    <p className="text-gray-700 text-xs md:text-xl flex items-center">
-                        <Link href="/" className="font-bold hover:underline">Home</Link>
+                    <p className="text-gray-700 text-sm md:text-lg flex items-center">
+                        <Link href="/" className="font-bold hover:underline">
+                            Home
+                        </Link>
                         <span className="font-bold mx-2">{'>'}</span>
-                        <Link href="/not-found" className="hover:underline">404</Link>
+                        <Link href="/404" className="hover:underline">
+                            404
+                        </Link>
                     </p>
                 </div>
             </div>
+
 
 
             <div className="text-center my-10">

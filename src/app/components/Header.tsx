@@ -69,15 +69,15 @@ function Header() {
                 {/* Mobile Menu Button */}
                 <button
                     onClick={toggleMenu}
-                    className="md:hidden text-2xl"
+                    className="lg:hidden text-2xl"
                     aria-label="Toggle Mobile Menu"
                 >
                     {isMenuOpen ? <HiOutlineX /> : <HiOutlineMenu />}
                 </button>
 
                 {/* Navigation Links for Desktop */}
-                <nav className="hidden md:block">
-                    <ul className="flex space-x-16 md:ml-[400px] font-medium">
+                <nav className="hidden lg:block">
+                    <ul className="flex space-x-8 lg:space-x-16  md:ml-[400px] font-medium">
                         <li>
                             <Link href="/" aria-label="Navigate to Home" className="hover:underline">Home</Link>
                         </li>
@@ -94,7 +94,7 @@ function Header() {
                 </nav>
 
                 {/* Icons */}
-                <div className="flex gap-3 md:space-x-12 md:mr-32 items-center">
+                <div className="flex ml-8 md-ml-0 space-x-3 xl:space-x-12 lg:mr-32 items-center">
 
                     {/* <Link href='/search'>
                         <FiSearch aria-label="Search" size={22} />
@@ -149,7 +149,7 @@ function Header() {
 
             {/* Mobile Menu (Visible when isMenuOpen is true) */}
             <nav
-                className={`md:hidden fixed top-0 left-0 w-full h-full bg-[#fbebb5] z-20 transition-transform duration-300 ${isMenuOpen ? 'transform translate-x-0' : 'transform -translate-x-full'}`}
+                className={`lg:hidden fixed top-0 left-0 w-96 border-r-2 h-full bg-[#fbebb5] z-20 transition-transform duration-300 ${isMenuOpen ? 'transform translate-x-0' : 'transform -translate-x-full'}`}
             >
                 <div className="flex justify-between items-center p-4 border-b">
                     <button
