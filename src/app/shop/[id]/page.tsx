@@ -111,7 +111,7 @@ const ProductPage = ({ params }: { params: { id: string } }) => {
                 {/* Text Section */}
                 <div className="w-full md:w-1/2 my-auto">
                     <h1 className="text-xl sm:text-2xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-semibold">{product.name}</h1>
-
+{/* .. */}
                     <h2 className="text-xs sm:text-sm md:text-lg lg:text-xl font-semibold mt-4 bg-yellow-700 text-white w-14 md:w-20  rounded-full p-1.5 md:p-2">${product.price} </h2>
                     <div className='flex'>
                         {/* Render Stars instead of rating number */}

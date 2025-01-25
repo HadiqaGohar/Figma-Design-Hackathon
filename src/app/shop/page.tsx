@@ -102,7 +102,7 @@ function Shop() {
                 <div className="mx-3 relative w-full">
                     <input
                         type="text"
-                        placeholder="Search products..."
+                        placeholder="What are you looking for ?"
                         className="w-full py-1 md:py-2.5 pl-9 pr-16 border-2 border-gray-300 rounded-full text-lg text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300 ease-in-out"
                         onChange={(e) => setSearch(e.target.value)}
                         value={search}

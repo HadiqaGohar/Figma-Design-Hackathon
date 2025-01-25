@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { Suspense } from 'react'
 import Hero from './hero/page'
 
 
@@ -8,23 +8,11 @@ import Hero from './hero/page'
 function Home() {
   // const amount = 49.99;
   return (
-    <div className='w-full-2xl mx-auto'>
-
-      <Hero />
-{/* .. */}
-      {/* <p>{amount}</p>
-      <Elements
-        stripe={stripePromise}
-        options={{
-          mode: "payment",
-          amount: convertToSubcurrency(amount), // cents
-          currency: "usd"
-        }}
-      >
-        <CheackoutPage amount={amount} />
-      </Elements> */}
-
-    </div>
+    <Suspense fallback={<div>loading...</div>}>
+      <div className='w-full-2xl mx-auto'>
+        <Hero />
+      </div>
+    </Suspense>
   )
 }
 

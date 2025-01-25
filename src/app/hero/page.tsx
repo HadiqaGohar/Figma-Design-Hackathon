@@ -332,6 +332,7 @@ function Hero() {
                         <button className="mt-4 rounded-full text-black hover:text-white hover:bg-black h-[48px] sm:h-[64px] w-[200px] sm:w-[255px] md:px-16 md:py-4 shadow-md hover:shadow-lg">
                             Follow Us
                         </button>
+                        
 
                     </div>
                 </div>
