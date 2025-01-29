@@ -19,6 +19,7 @@
     "@stripe/react-stripe-js": "^3.1.1",
     "@stripe/stripe-js": "^5.5.0",
     "axios": "^1.7.9",
+    "date-fns": "^4.1.0",
     "dotenv": "^16.4.7",
     "js-cookie": "^3.0.5",
     "next": "^14.2.23",
@@ -29,9 +30,10 @@
     "react-hot-toast": "^2.5.1",
     "react-icons": "^5.4.0",
     "react-redux": "^9.2.0",
+    "react-toastify": "^11.0.3",
     "sanity": "^3.70.0",
     "shipengine": "^1.0.7",
-    "stripe": "^17.5.0",
+    "stripe": "^17.4.0-beta.2",
     "styled-components": "^6.1.14"
   },
   "devDependencies": {

@@ -21,7 +21,7 @@ function CheackOut() {
                     width={1600}
                     className="w-full h-40 md:h-auto object-cover"
                 />
-{/* ... */}
+                {/* ... */}
                 {/* Logo Image - Positioned Above Banner */}
                 <div className="absolute top-16 left-1/2 transform -translate-x-1/2 z-10">
                     <Image
@@ -137,7 +137,7 @@ function CheackOut() {
                     </div>
 
                     {/* Payment Method */}
-                   <div className="flex items-center mt-4 text-gray-400">
+                    <div className="flex items-center mt-4 text-gray-400">
                         <input type="radio" id="cod" name="payment" className="mr-2" />
                         <label htmlFor="cod" className="text-md">Cash On Delivery</label>
                     </div>

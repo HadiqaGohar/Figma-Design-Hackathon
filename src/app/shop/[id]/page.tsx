@@ -185,3 +185,4 @@ const ProductPage = ({ params }: { params: { id: string } }) => {
 };
 
 export default ProductPage;
+// ..........

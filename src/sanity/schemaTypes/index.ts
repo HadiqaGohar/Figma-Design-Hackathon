@@ -1,10 +1,11 @@
 import { type SchemaTypeDefinition } from 'sanity'
 import product from './product'
-// import blog from './blog'
-
-// import hero_section_one from './hero_section_one'
-
+import banner from './banner'
+import secondbanner from './secondbanner'
+import blog from './blog'
+// import comment from './comment'
+import shippingAddress from './shippingAddress'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [product ],
+  types: [product, banner, secondbanner, blog, shippingAddress],
 }

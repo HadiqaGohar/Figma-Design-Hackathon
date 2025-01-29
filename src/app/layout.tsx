@@ -5,6 +5,7 @@ import { StoreProvider } from '@/redux/StoreProvider';
 import { ClerkProvider } from '@clerk/nextjs';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import {loadStripe} from '@stripe/stripe-js';
 
 export const metadata: Metadata = {
   title: "HG-Template-0-Website",

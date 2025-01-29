@@ -12,17 +12,18 @@ import Round from "../components/Round";
 import Header from '../components/Header';
 import { urlFor } from "../../sanity/lib/image";
 import { SanityImageSource } from '@sanity/image-url/lib/types/types';
+import toast from 'react-hot-toast';
 
 
 interface CartState {
   loading: boolean;
-  cartItems: any[]; 
+  cartItems: any[];
   wishlistItems: any[]
 }
 
 interface RootState {
   cart: CartState;
-  wishlist : CartState
+  wishlist: CartState
 }
 
 
@@ -30,14 +31,18 @@ interface RootState {
 function WishlistPage() {
   const dispatch = useDispatch();
   const router = useRouter();
-  const { wishlistItems = [] } = useSelector((state : RootState) => state.wishlist);
+  const { wishlistItems = [] } = useSelector((state: RootState) => state.wishlist);
 
   const removeFromWishlistHandler = (id: any) => {
     dispatch(removeFromWishlist(id));
+
+    // toast.error(`${product?.name.substring(0)} add successfully`);
   };
 
   const addToCartHandler = (product: any) => {
     dispatch(addToCart({ ...product, qty: 1 }));
+    toast.success(`${product?.name.substring(0)} add successfully`);
+
   };
 
   if (wishlistItems.length === 0) {
@@ -94,7 +99,7 @@ function WishlistPage() {
       </div>
 
       <div className='max-w-screen-2xl mx-auto'>
-       
+
 
         <div className="text-2xl text-center md:text-left my-8 md:text-3xl font-bold text-yellow-600 mb-6">Your Wishlist</div>
         <div className="grid sm:grid-cols-1 md:grid-cols-4 gap-4">
@@ -113,8 +118,8 @@ function WishlistPage() {
                   <tr key={item.id} className="border-b hover:bg-yellow-50">
                     <td className="md:p-4 py-4 px-1 flex items-center">
                       <Link href={`/products/${item.id}`} className="flex items-center space-x-4">
-                       
-                       
+
+
                         <Image
                           src={item.image ? urlFor(item.image).width(100).height(100).url() : "/images/default-product.jpg"}
                           alt={item.name || "Product Image"}

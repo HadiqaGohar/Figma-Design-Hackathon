@@ -8,8 +8,6 @@ import Link from 'next/link'
 import ShippingRatesPage from '../shipping/page'
 import Header from '../components/Header'
 import { urlFor } from "../../sanity/lib/image"; // Import Sanity URL transformation function
-import CheckoutButton from '../components/CheckoutButton'
-import { loadStripe } from "@stripe/stripe-js";
 
 function PlaceOrderScreen() {
   const {
