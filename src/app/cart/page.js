@@ -61,6 +61,7 @@ function CartPage() {
     return "/images/default-product.jpg"; // Return default image if not found
   };
 
+  
   return (
     <div className="">
      
@@ -185,7 +186,8 @@ function CartPage() {
               </table>
               <li className=''>
                 <button
-                  onClick={() => router.push('/shipping')}
+                // Remove /shipping and add /checkout
+                  onClick={() => router.push('/checkout')}
                   className="w-full px-6 py-3 border border-black hover:bg-black hover:text-white translate-x-1  rounded-xl"
                 >
                   Proceed to checkout

@@ -87,9 +87,7 @@ function Blog() {
   return (
     <div className="max-w-screen-2xl container mx-auto pb-8 px-4">
       {/* Header Section */}
-      <div className="bg-[#faf4f4]">
-        <Header />
-      </div>
+    
 
       {/* Banner Section */}
       <div className="relative text-black">

@@ -140,3 +140,75 @@
 .sidebar.visible {
   transform: translateX(0); /* Show the sidebar */
 }
+
+
+
+
+
+
+
+
+
+
+
+/* .................................>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>. */
+.checkout-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.checkout-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.order-details {
+  flex: 1;
+  margin-right: 2rem; /* Space between order details and payment form */
+  /* border: 1px solid #e0e0e0; */
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.payment-form {
+  flex: 1;
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.order-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+  object-fit: cover;
+}
+
+.submit-button {
+  padding: 12px 24px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #555;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}

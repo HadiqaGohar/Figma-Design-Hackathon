@@ -149,7 +149,7 @@ function Header() {
 
             {/* Mobile Menu (Visible when isMenuOpen is true) */}
             <nav
-                className={`lg:hidden fixed top-0 left-0 w-96 border-r-2 h-full bg-[#fbebb5] z-20 transition-transform duration-300 ${isMenuOpen ? 'transform translate-x-0' : 'transform -translate-x-full'}`}
+                className={`lg:hidden fixed top-0 left-0 w-72 border-r-2 h-full bg-[#fbebb5] z-20 transition-transform duration-300 ${isMenuOpen ? 'transform translate-x-0' : 'transform -translate-x-full'}`}
             >
                 <div className="flex justify-between items-center p-4 border-b">
                     <button
