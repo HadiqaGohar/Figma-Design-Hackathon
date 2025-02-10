@@ -13,7 +13,7 @@ import { AiOutlineDelete } from 'react-icons/ai';
 import CheckoutWizard from '../components/CheckoutWizard';
 import Header from '../components/Header';
 import { urlFor } from "../../sanity/lib/image"; // Import Sanity URL transformation function
-
+import Field from "../components/Field"
 
 function CartPage() {
   const [loading, setLoading] = useState(false);
@@ -101,7 +101,7 @@ function CartPage() {
         </div>
       </div>
 
-      <CheckoutWizard activeStep={0} />
+      {/* <CheckoutWizard activeStep={0} /> */}
 
       <div className='max-w-screen-2xl mx-auto'>
         <div className="text-2xl text-center md:text-left my-8 md:text-3xl font-bold text-yellow-600 mb-6">Shopping Cart</div>
@@ -187,7 +187,7 @@ function CartPage() {
               <li className=''>
                 <button
                 // Remove /shipping and add /checkout
-                  onClick={() => router.push('/checkout')}
+                  onClick={() => router.push('/ship')}
                   className="w-full px-6 py-3 border border-black hover:bg-black hover:text-white translate-x-1  rounded-xl"
                 >
                   Proceed to checkout
@@ -204,7 +204,7 @@ function CartPage() {
         </div>
 
         <div className='my-10'>
-          <Round />
+        <Field />
         </div>
       </div>
     </div>

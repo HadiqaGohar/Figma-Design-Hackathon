@@ -55,11 +55,10 @@ function Shop() {
         fetchData();
     }, []);
 
-    // Filter products based on search query
     const filteredProducts = products.filter((product) =>
-        product.name.toLowerCase().includes(search.toLowerCase())
+        product.name?.toLowerCase().includes(search?.toLowerCase() || "")
     );
-
+    
     return (
         <div className="mx-auto">
             {/* Banner Section */}

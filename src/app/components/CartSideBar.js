@@ -26,7 +26,7 @@ function CartSidebar() {
   };
 
   const toggleSidebar = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(false);
   };
 
   // Function to get image URL
@@ -46,7 +46,7 @@ function CartSidebar() {
           ? ""
           : cartItems.length > 0 &&
             (pathname === "/" || pathname.indexOf("/shop/") >= 0)
-            ? `fixed top-0  right-0 h-full w-[280px] shadow-lg border-l border-gray-300 overflow-y-auto bg-white transition-transform ease-in-out duration-300 ${isOpen ? "block" : "hidden"}`
+            ? `fixed top-0 z-10 right-0 h-full w-[280px] shadow-lg border-l border-gray-300 overflow-y-auto bg-white transition-transform ease-in-out duration-300 ${isOpen ? "block" : "hidden"}`
             : "hidden"
       }
     >

@@ -11,7 +11,7 @@ const initialState = Cookies.get("cart")
         paymentMethod: '',
 
         itemsPrice: 0,
-        shippingPrice: 0,
+        shippingPrice: 100,
         taxPrice: 0,
         totalPrice: 0,
     };

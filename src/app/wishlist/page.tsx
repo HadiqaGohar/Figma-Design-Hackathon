@@ -13,6 +13,7 @@ import Header from '../components/Header';
 import { urlFor } from "../../sanity/lib/image";
 import { SanityImageSource } from '@sanity/image-url/lib/types/types';
 import toast from 'react-hot-toast';
+import Field from '../components/Field';
 
 
 interface CartState {
@@ -101,8 +102,8 @@ function WishlistPage() {
       <div className='max-w-screen-2xl mx-auto'>
 
 
-        <div className="text-2xl text-center md:text-left my-8 md:text-3xl font-bold text-yellow-600 mb-6">Your Wishlist</div>
-        <div className="grid sm:grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="text-2xl text-center md:text-left my-8 md:text-3xl font-bold text-yellow-600 mb-6 ">Your Wishlist</div>
+        <div className="grid sm:grid-cols-1 md:grid-cols-4 gap-4 mx-auto ">
           <div className="md:col-span-3 bg-white shadow-md rounded-lg">
             <table className="min-w-full table-auto">
               <thead className="bg-[#FFF9E5] text-yellow-700">
@@ -156,7 +157,7 @@ function WishlistPage() {
           </div>
         </div>
         <div className='my-10'>
-          <Round />
+          <Field />
         </div>
       </div>
     </div>
