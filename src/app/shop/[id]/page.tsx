@@ -5,21 +5,23 @@ import Image from 'next/image';
 import Header from '../../components/Header';
 import { client } from '@/sanity/lib/client';
 import { FaStar, FaStarHalfAlt, FaRegStar, FaShoppingCart, FaLinkedin, FaTwitter } from 'react-icons/fa'; // Import star icons from react-icons
+import { BiSolidCommentCheck } from 'react-icons/bi';
 import { RiShoppingCartFill } from 'react-icons/ri';
 import { GoHeartFill } from "react-icons/go";
 import { BsFacebook } from 'react-icons/bs';
 import AddToCart from '../../components/AddToCart'
 
 import AddToWishlist from '../../components/AddToWishlist'
+import Link from 'next/link';
 
 
 interface ProductImage {
     asset: {
-      url: string;
+        url: string;
     };
-  }
-  
-  interface Product {
+}
+
+interface Product {
     id: string;
     name: string;
     description: string;
@@ -32,8 +34,8 @@ interface ProductImage {
     category: string;
     sizes: string[];
     image: ProductImage;
-  }
-  
+}
+
 
 
 const ProductPage = ({ params }: { params: { id: string } }) => {
@@ -94,7 +96,7 @@ const ProductPage = ({ params }: { params: { id: string } }) => {
 
     return (
         <div className="md:mx-auto mx-2 ">
-         
+
             {/* Product Details Section */}
             <div className="max-w-screen-2xl  container mx-auto flex flex-col  md:flex-row gap-6 my-12 md:my-24">
                 {/* Image Section */}
@@ -111,7 +113,7 @@ const ProductPage = ({ params }: { params: { id: string } }) => {
                 {/* Text Section */}
                 <div className="w-full md:w-1/2 my-auto">
                     <h1 className="text-xl sm:text-2xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-semibold">{product.name}</h1>
-{/* .. */}
+                    {/* .. */}
                     <h2 className="text-xs sm:text-sm md:text-lg lg:text-xl font-semibold mt-4 bg-yellow-700 text-white w-14 md:w-20  rounded-full p-1.5 md:p-2">${product.price} </h2>
                     <div className='flex'>
                         {/* Render Stars instead of rating number */}
@@ -128,7 +130,7 @@ const ProductPage = ({ params }: { params: { id: string } }) => {
 
                     {/* Add to Cart Button with Cart Icon */}
                     <div className='flex flex-col md:flex-row gap-2'>
-                   
+
 
                         <div className=' mt-4 md:ml-12 md:mt-7'>
                             <AddToCart
@@ -144,12 +146,22 @@ const ProductPage = ({ params }: { params: { id: string } }) => {
                             <AddToWishlist
                                 // showQty={false}
                                 product={product}
-                                // increasePerClick={true}
-                                // redirect={false}
+                            // increasePerClick={true}
+                            // redirect={false}
 
                             />
                         </div>
-
+                        <Link href="/commentForm">
+      <div
+        className="fixed right-5 bottom-5 h-[45px] w-[45px] bg-yellow-600 rounded-full flex items-center justify-center cursor-pointer shadow-lg 
+        transition-transform duration-300 hover:scale-110 hover:bg-yellow-700"
+      >
+        <BiSolidCommentCheck size={25} color="white" />
+        <span className="absolute right-12 text-sm bg-black text-white px-2 py-1 rounded-md opacity-0 transition-opacity duration-300 hover:opacity-100">
+          Add a Comment
+        </span>
+      </div>
+    </Link>
                         {/* <button className="md:mt-6 px-6 py-2 bg-yellow-800 text-white text-lg font-medium rounded-lg shadow-lg flex items-center justify-center transform transition-all duration-300 hover:bg-yellow-600 hover:scale-105 focus:outline-none">
                             <GoHeartFill className="mr-2" size={20} /> Add to Wishlist
                         </button> */}

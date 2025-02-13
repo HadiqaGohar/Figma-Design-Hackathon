@@ -7,7 +7,8 @@ import blog from './blog'
 // import comment from './comment'
 import shippingAddress from './shippingAddress'
 import orderDetails from './orderDetails'
+import comment from './comment'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [product, banner, secondbanner, blog, shippingAddress, orderDetails],
+  types: [product, banner, secondbanner, blog, shippingAddress, orderDetails , comment],
 }
